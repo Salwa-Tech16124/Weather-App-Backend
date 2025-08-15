@@ -1,8 +1,15 @@
+import os
+from dotenv import load_dotenv
+
+load_dotenv()  # load variables from .env
+API_KEY = os.environ.get("WEATHER_API_KEY")
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import requests
 import sqlite3
 from datetime import datetime
+
+
 
 app = FastAPI()
 
